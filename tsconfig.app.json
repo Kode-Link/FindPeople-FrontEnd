@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    /* Diretório para armazenar o cache da build */
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    /* Alvo da compilação */
+    "target": "ES2022",
+
+    /* Ajuda na compatibilidade com classes modernas */
+    "useDefineForClassFields": true,
+
+    /* Bibliotecas padrão disponíveis */
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    /* Tipo de módulo (ideal para Vite) */
+    "module": "ESNext",
+
+    /* Pular verificação de tipos de dependências */
+    "skipLibCheck": true,
+
+    /* Modo recomendado para bundlers como Vite */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+
+    /* Não emitir arquivos JS (Vite cuida disso) */
+    "noEmit": true,
+
+    /* JSX moderno (React 17+) */
+    "jsx": "react-jsx",
+
+    /* Verificações de qualidade de código */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Controle manual de tipos */
+    "types": ["node", "react", "react-dom"],
+
+    /* Configuração de alias "@" */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+
+  /* Pastas incluídas */
+  "include": ["src"],
+
+  /* Pastas ignoradas */
+  "exclude": ["node_modules"]
+}
