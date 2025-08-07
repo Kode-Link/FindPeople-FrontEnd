@@ -1,7 +1,7 @@
 export default function App() {
   return (
-    <div className="text-3xl">
-      Tailwind está funcionando
+    <div className="text-xl text-center">
+      Plataforma para encontrar pessoas desaparecidas!
     </div>
   );
 }
