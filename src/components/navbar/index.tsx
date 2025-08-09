@@ -1,7 +1,7 @@
 import { Search, User } from "lucide-react";
 import { Logo } from "../logo";
 import { InputWithIcon } from "../input-icon";
-import { Button } from "../ui/button";
+import { ShinyButton } from "../magicui/shiny-button";
 
 const MenuItems = [
   { label: "Mapa", path: "/maps" },
@@ -13,7 +13,10 @@ const MenuItems = [
 export const Navbar = () => {
   return (
     <nav className="p-4 w-full flex justify-around items-center bg-white shadow-md">
+      {/* Logo */}
       <Logo />
+
+      {/* Links de menu */}
       <div className="flex items-center justify-between w-full max-w-4xl">
         <ul className="flex space-x-4 mt-2">
           {MenuItems.map((item) => (
@@ -28,24 +31,25 @@ export const Navbar = () => {
           ))}
         </ul>
 
+        {/* Área de busca, botão e perfil */}
         <div className="flex justify-center gap-3 items-center">
-            <div className="max-w-sm mx-auto">
-          {/* <input
-            placeholder="Buscar"
-            className="border p-1 rounded-md border-gray-300"
-            /> */}
-          <InputWithIcon
-            icon={<Search className="h-5 text-gray-700" />}
-            placeholder="Buscar"
-            className="border p-1 rounded-md border-gray-300"
-            type="text"
+          {/* Campo de busca */}
+          <div className="max-w-sm mx-auto">
+            <InputWithIcon
+              icon={<Search className="h-5 text-gray-700" />}
+              placeholder="Buscar"
+              className="border p-1 rounded-md border-gray-300"
+              type="text"
             />
-            </div>
-          <Button className="bg-blue-600 w-full text-white p-1 rounded-md">
-            + Cadastrar Caso
-          </Button>
+          </div>
 
-          <div className="flex items-center m-auto border border-gray-300 rounded-md p-2">
+          {/* Botão para cadastrar caso */}
+          <ShinyButton className="bg-blue-600 text-white px-4 py-2 rounded-md">
+            + Cadastrar Caso
+          </ShinyButton>
+
+          {/* Ícone de usuário */}
+          <div className="flex cursor-pointer items-center border border-gray-300 rounded-md p-2">
             <User className="h-5 text-gray-700" />
           </div>
         </div>
