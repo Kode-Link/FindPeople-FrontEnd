@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react'
 import path, { dirname } from "path";
 import { fileURLToPath } from 'url';
@@ -11,8 +10,12 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   server: {
     host: true,
+    headers: {
+      "Cross-Origin-Opener-Policy" : "same-origin",
+      "Cross-Origin-Embedder-Policy": "require-corp",
+    },
   },
-  plugins: [react(), tailwindcss(),],
+  plugins: [react(),],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, "./src"),
