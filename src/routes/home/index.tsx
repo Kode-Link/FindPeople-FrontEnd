@@ -11,10 +11,5 @@ export const HomesRoutes: IRouteProps = {
       element: Dashboard,
       visibility: "private",
     },
-    //   {
-    //     path: "/profile",
-    //     element: Profile,
-    //     visibility: "private",
-    //   },
   ],
 };
