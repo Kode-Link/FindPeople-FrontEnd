@@ -2,7 +2,7 @@ import { ArrowDownUp, MapPin, Timer, Users } from "lucide-react";
 
 export const Statistics = () => {
   return (
-    <section className="bg-gray-100 my-8 p-8 w-full flex flex-col">
+    <section className="bg-gray-100 p-8 w-full flex flex-col">
       <h2 className="text-lg font-semibold text-center text-gray-800">
         Estatísticas da Plataforma
       </h2>
