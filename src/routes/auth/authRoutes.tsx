@@ -1,4 +1,5 @@
 import { Login } from "@/pages/auth/login";
+import { Register } from "@/pages/auth/register";
 import { AuthLayout } from "@/pages/layout/authLayout";
 
 export const AuthRoutes: IRouteProps = {
@@ -11,10 +12,10 @@ export const AuthRoutes: IRouteProps = {
         element: Login,
         visibility: "auth",
       },
-    //   {
-    //     path: "register",
-    //     element: Register,
-    //     visibility: "auth",
-    //   },
+      {
+        path: "/auth/register",
+        element: Register,
+        visibility: "auth",
+      },
     ],
 }
