@@ -10,6 +10,6 @@ export const HomesRoutes: IRouteProps = {
       path: "/home",
       element: Home,
       visibility: "private",
-    }
+    },
   ],
 };
