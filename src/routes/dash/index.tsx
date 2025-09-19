@@ -1,9 +1,9 @@
 import { Dashboard } from "@/pages/dashboard";
-import { HomeLayout } from "@/pages/layout/homeLayout";
+import { DashLayout } from "@/pages/layout/dashLayout";
 
-export const HomesRoutes: IRouteProps = {
+export const DashRoutes: IRouteProps = {
   path: "/",
-  element: HomeLayout,
+  element: DashLayout,
   visibility: "private",
   children: [
     {

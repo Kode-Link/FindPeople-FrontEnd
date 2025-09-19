@@ -1,6 +1,7 @@
 import { AuthRoutes } from "./auth/authRoutes";
-import { HomesRoutes } from "./home";
+import { HomesRoutes } from "./auth/homeRoutes";
+import { DashRoutes } from "./dash";
 
 export const WrapperRoutes = () => {
-  return [AuthRoutes, HomesRoutes];
+  return [AuthRoutes, DashRoutes, HomesRoutes];
 };

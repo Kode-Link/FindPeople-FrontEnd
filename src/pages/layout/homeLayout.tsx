@@ -1,13 +1,15 @@
-import { Help } from "@/components/help";
-import { Navbar } from "@/components/navbar";
-import { Statistics } from "@/components/statistics";
+import { Navbar } from "@/components/@home/navbar";
+import Sidebar from "@/components/@home/sidebar";
+import { Outlet } from "react-router-dom";
 
 export const HomeLayout = () => {
   return (
-    <section className="flex flex-col justify-center items-center w-full">
+    <>
       <Navbar />
-      <Statistics />
-      <Help />
-    </section>
+      <Sidebar />
+      <div className="absolute top-[80px] ml-[260px]">
+        <Outlet />
+      </div>
+    </>
   );
 };
