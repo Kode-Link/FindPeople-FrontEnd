@@ -1,6 +1,6 @@
 import { ferramentasItems, menuItems } from "@/lib/menu";
 import type { ReactNode } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Sidebar() {
   const url = useLocation();
@@ -10,6 +10,7 @@ export default function Sidebar() {
     icon?: ReactNode | string;
     label: string;
   }
+
   return (
     <>
       <section className="border-r lg:w-56 overflow-y-hidden w-40 md:w-52 sm:w-44 xl:w-60  h-screen">
@@ -18,18 +19,18 @@ export default function Sidebar() {
             <ul
               className={`
               ${
-                url.pathname === "/home" && i.label === "Visão Geral"
+                url.pathname === `/${i.label.toLowerCase().replace(" ", "-")}`
                   ? "bg-[#2563EB] text-white rounded-md cursor-pointer hover:scale-105 transition-all "
                   : "hover:scale-105 transition-all"
               }
-            flex py-2 gap-2 text-center w-full
+            flex py-2 gap-2 px-2 transition-all cursor-pointer
             `}
             >
               <li>{i.icon}</li>
               <li className="text-sm ">
-                <a className="text-sm" href={`/${i.label}`}>
+                <Link className="text-sm" to={`/${i.label}`}>
                   {i.label}
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -41,9 +42,9 @@ export default function Sidebar() {
             <ul className="flex py-2 gap-2 text-center w-full">
               <li>{i.icon}</li>
               <li className="text-sm ">
-                <a className="text-gray-500 text-sm" href={`/${i.label}`}>
+                <Link className="text-gray-500 text-sm" to={`/${i.label}`}>
                   {i.label}
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
