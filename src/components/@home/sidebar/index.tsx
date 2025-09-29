@@ -19,7 +19,7 @@ export default function Sidebar() {
             <ul
               className={`
               ${
-                url.pathname === `/${i.label.toLowerCase().replace(" ", "-")}`
+                url.pathname === `/${i.key}`
                   ? "bg-[#2563EB] text-white rounded-md cursor-pointer hover:scale-105 transition-all "
                   : "hover:scale-105 transition-all"
               }

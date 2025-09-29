@@ -1,17 +1,21 @@
  export const menuItems = [
     {
+      key:"home",
       icon: "",
       label: "Visão Geral",
     },
     {
+      key:"register",
       icon: "",
       label: "Registrar Pessoa",
     },
     {
+      key:"cases",
       icon: "",
       label: "Meus Casos",
     },
     {
+      key:"sightings",
       icon: "",
       label: "Avistamentos",
     },
